@@ -35,8 +35,8 @@ public class StubDriver {
 //		conf.set("textinputformat.record.delimiter", ".");
 
 		FileInputFormat.addInputPath(job, new Path(args[1]));
-		//FileOutputFormat.setOutputPath(job, new Path(args[2])); // amit comment
-                FileOutputFormat.setOutputPath(job, new Path("javaout_demo"));
+		FileOutputFormat.setOutputPath(job, new Path(args[2])); 
+                //FileOutputFormat.setOutputPath(job, new Path("javaout_demo"));
 
 		boolean result = job.waitForCompletion(true);
 		System.exit(result ? 0 : 1);
